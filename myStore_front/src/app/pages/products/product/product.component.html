@@ -1,0 +1,37 @@
+ <mat-card class="card">
+  <div class="product-image">
+    <img [src]="product.img" alt="{{ product.name }}">
+  </div>
+  <mat-card-title>{{ product.name }}</mat-card-title>
+  <mat-card-content>
+    {{ product.description }}
+  </mat-card-content>
+  <mat-card-actions >
+    <div class="" style="display: flex;">
+    <button
+    mat-flat-button
+      color="primary"
+      (click)="onClick()"
+      [disabled]="product.stock === 0"
+      class="buy-button button"
+      style="width: auto"
+      >
+      <div class="button-content" >
+        <mat-icon >add_shopping_cart</mat-icon>
+        <span  class="left" [ngClass]="{ 'blink': quantity > 0 }">{{ quantity}}</span>
+        <span class="center">
+          <mat-icon>undo</mat-icon>
+          Buy {{ product.price | currency }}
+          <span  class="right">(stock {{ product.stock }})</span>
+        </span>
+      </div>
+    </button>
+    <div class="button_undo" style="margin-left: 3px;width: auto;">
+    <button mat-flat-button color="warn" (click)="onUndoClick()" [disabled]="quantity === 0" class="undo-button">
+      <mat-icon >remove_shopping_cart</mat-icon>
+    </button>
+  </div>
+</div>
+  </mat-card-actions>
+</mat-card>
+

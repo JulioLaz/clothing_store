@@ -1,0 +1,44 @@
+<mat-toolbar #categoriasComponent class="main-header" color="primary">
+
+  <div class="name_card">
+    <div class="name_store">
+      <img src="assets/clothing_store000.png" alt="Imagen de la tienda">
+        <a [routerLink]="['/']" ><div>Clothing</div><div>Store</div></a>
+    </div>
+
+    <div  style="display: flex;flex-direction: row;align-items: center;">
+      <div>
+        <app-cart class="shopping-cart" (click)="goToCheckout()"></app-cart>
+      </div>
+      <ng-container *ngIf="(quantity$ | async) !== 0">
+        <a (click)="clearCart()">
+          <button mat-flat-button color="warn" class="narrow-undo-button">
+            <mat-icon>remove_shopping_cart</mat-icon>
+          </button>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="oders" >
+    <app-categorias [routerLink]="['/']" (categoriasSelected)="onCategorySelected($event)"></app-categorias>
+
+    <div>
+      <ng-container *ngIf="(quantity$ | async) !== 0,else disabletext">
+        <a class="a_nav_list" [routerLink]="['/details']">Detalle</a>
+      </ng-container>
+      <ng-template #disabletext>
+        <span class="a_nav_list" style="color: grey;">Detalle</span>
+      </ng-template>
+    </div>
+    <div>
+      <a class="a_nav_list" [routerLink]="['/stores']">Tiendas</a>
+    </div>
+
+    <a class="a_nav_list narrow-icon" [routerLink]="['/login']">
+      <mat-icon>edit_note</mat-icon>
+    </a>
+  </div>
+</mat-toolbar>
+
+<!-- [disabled]="(quantity$ | async) === 0" -->

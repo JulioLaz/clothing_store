@@ -1,0 +1,55 @@
+<div class="containe">
+  <form class="form edicion" #newProductForm="ngForm" >
+    <table class="table anchoTotal">
+      <caption class="main-title">New Product</caption>
+          <tbody >
+
+          <tr >
+            <mat-form-field class=" anchoTotal">
+              <input  matInput placeholder="Name" [(ngModel)]="model.name" name="name" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput placeholder="Img" [(ngModel)]="model.img" name="img" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput type="number" placeholder="Price" [(ngModel)]="model.price" name="price" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput placeholder="Description" [(ngModel)]="model.description" name="description" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <mat-label>Category</mat-label>
+              <mat-select style="width: 6rem;" [(ngModel)]="model.categoryId" name="categoryId" required >
+                <mat-option *ngFor="let category of categorias" [value]="category.id">
+                  {{ category.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput type="number" placeholder="Stock" [(ngModel)]="model.stock" name="stock" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input style="width: 7rem;" matInput type="date" placeholder="Date" [(ngModel)]="model.date" name="date" required >
+            </mat-form-field>
+          </tr>
+          <tr style="display: flex;justify-content: center;">
+              <button style="width: 70%;" (click)="onSubmit(newProductForm)" [disabled]="!newProductForm.form.valid" class="" color="primary" mat-raised-button type="submit">
+                Add Product
+              </button>
+          </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

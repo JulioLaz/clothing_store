@@ -1,0 +1,17 @@
+.products {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+  }

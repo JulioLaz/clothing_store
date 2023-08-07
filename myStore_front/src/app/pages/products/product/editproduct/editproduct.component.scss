@@ -1,0 +1,23 @@
+.no-border {
+  border: none;
+  resize: none; /* This prevents users from resizing the textarea */
+  overflow: hidden; /* This hides the scrollbars */
+}
+.center{
+  text-align: center;
+}
+.main-title {
+  text-align: center;
+  font-size: 1.5em; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font weight if desired */
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+}
+th{
+  font-size: 1em;
+}
+@media screen and (max-width: 600px) {
+  .edicion {
+    margin-top: 10rem;
+  }
+  }

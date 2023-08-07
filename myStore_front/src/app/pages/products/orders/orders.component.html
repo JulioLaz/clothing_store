@@ -1,0 +1,22 @@
+<div class="container" *ngIf="ordenes.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th >ID</th>
+        <th >Nombre</th>
+        <th>Fecha</th>
+        <th>Dominicilio</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ordenes">
+        <td>{{item.id}}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.date }}</td>
+        <td>{{ item.shippingAddress}}</td>
+        <td>{{ item.city}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

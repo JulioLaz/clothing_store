@@ -1,0 +1,9 @@
+<div style="height: 4rem">
+  <mat-form-field style="width: 5rem;padding: 0 !important">
+    <mat-label style="font-size: 14px;font-weight: 500;">Categoría</mat-label>
+    <mat-select (selectionChange)="changeCategory($event.value)">
+      <mat-option *ngFor="let item of categorias" [value]="item.id">{{ item.name }}</mat-option>
+      <mat-option [value]="all">All</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

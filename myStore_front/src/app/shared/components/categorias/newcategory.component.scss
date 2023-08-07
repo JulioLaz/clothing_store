@@ -1,0 +1,23 @@
+.main-title {
+  text-align: center;
+  font-size: 1.5em; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font weight if desired */
+  padding: 10px 0;
+  margin: 1rem;
+}
+th{
+  font-size: 1em;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .edicion {
+    margin-top: 10rem;
+  }
+  }

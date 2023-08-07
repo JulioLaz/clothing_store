@@ -1,0 +1,30 @@
+<div class="container mt-5 aa" style="display: flex;justify-content: center;margin-top: 9rem;">
+  <div class="d-flex justify-content-center" style="border:.5px solid grey;border-radius: 10px;">
+    <div fxLayout="row" fxLayoutAlign="start center" style="display: flex; justify-content:end">
+      <button mat-icon-button color="primary" routerLink="/"><mat-icon>cancel</mat-icon></button>
+    </div>
+    <div class="login-container" style="margin:0 2rem 2rem 2rem;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+      <h2>Login</h2>
+      <p>use admin on both to test!</p>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-field">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" name="username" [(ngModel)]="username" required>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="{{ hidePassword ? 'password' : 'text' }}" name="password" [(ngModel)]="password" required>
+            <button mat-icon-button matSuffix (click)="togglePassword()" type="button">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit" style="width: 100%;">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

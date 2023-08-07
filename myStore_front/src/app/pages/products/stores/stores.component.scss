@@ -1,0 +1,22 @@
+.container {
+  margin: 4.5rem 1rem;
+  width: auto;
+}
+
+table {
+  font-size: calc(8px + .8vw);
+  line-height: 1;
+  width: 100%;
+}
+
+th {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+td {
+  background-color: #eee;
+  padding: 1rem;
+}

@@ -1,0 +1,28 @@
+.container {
+  margin: 6rem auto 0;
+  width: 90%;
+}
+
+.form {
+  &__element {
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+
+  .mat-radio-group {
+    display: block;
+  }
+
+  .mat-radio-button {
+    margin-right: 1rem;
+  }
+}
+
+.actions {
+  margin: 0 auto 0;
+  width: 40%;
+
+  &__btn {
+    width: 100%;
+  }
+}

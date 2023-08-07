@@ -1,0 +1,23 @@
+<div class="containe">
+  <form class="form" #newCategoryForm="ngForm">
+    <table class="table edicion" style="width: 50vw;">
+      <caption class="main-title">New Category</caption>
+
+      <tbody style="display: flex; flex-direction: column;justify-content:space-between;">
+        <!-- <tr> -->
+
+          <div>
+            <mat-form-field class="form__element" style="width: 60vw;">
+              <input matInput placeholder="Name" [(ngModel)]="model.name" name="name" required>
+            </mat-form-field>
+          </div>
+          <div style="display: flex;justify-content: center;">
+            <button style="width: 100%;" (click)="onSubmit(newCategoryForm)" class="" color="primary" mat-raised-button type="submit">
+              Add
+            </button>
+          </div>
+        <!-- </tr> -->
+      </tbody>
+    </table>
+  </form>
+</div>
