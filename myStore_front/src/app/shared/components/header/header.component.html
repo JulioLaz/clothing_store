@@ -20,6 +20,8 @@
     </div>
   </div>
 
+  <!-- <a class="a_nav_list" [routerLink]="['/viewdetails']">viewdetails</a> -->
+
   <div class="oders" >
     <app-categorias [routerLink]="['/']" (categoriasSelected)="onCategorySelected($event)"></app-categorias>
 
@@ -31,8 +33,9 @@
         <span class="a_nav_list" style="color: grey;">Detalle</span>
       </ng-template>
     </div>
+
     <div>
-      <a class="a_nav_list" [routerLink]="['/stores']">Tiendas</a>
+      <a class="a_nav_list" [routerLink]="['/store']">Tiendas</a>
     </div>
 
     <a class="a_nav_list narrow-icon" [routerLink]="['/login']">
@@ -40,5 +43,3 @@
     </a>
   </div>
 </mat-toolbar>
-
-<!-- [disabled]="(quantity$ | async) === 0" -->

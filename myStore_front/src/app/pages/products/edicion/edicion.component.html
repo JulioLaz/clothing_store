@@ -1,23 +1,49 @@
-<div class="container mt-5" style="display: flex;justify-content: center;margin-top: 9rem;">
-  <div class="d-flex justify-content-center" style="border:.5px solid grey;border-radius: 10px;">
-    <div fxLayout="row" fxLayoutAlign="start center" style="display: flex; justify-content:end">
-      <button mat-icon-button color="primary" routerLink="/"><mat-icon>cancel</mat-icon></button>
-    </div>
-    <div class="login-container" style="margin:0 2rem 2rem 2rem;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-      <h2>what do you want to edit?</h2>
-      <div >
+<div class="container mt-5" style="display: flex; justify-content: center; margin-top: 9rem">
+  <div class="d-flex justify-content-center" style="border: 0.5px solid grey; border-radius: 10px">
 
-        <a class="margin" [routerLink]="['/category']" mat-raised-button color="primary" style="width: 100%;">
-          New category
-        </a>
-        <a class="margin" [routerLink]="['/editproduct']" mat-raised-button color="primary" style="width: 100%;">
+    <div fxLayout="row" fxLayoutAlign="start center" style="display: flex; justify-content: end">
+      <button mat-icon-button color="primary" routerLink="/">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+
+    <div class="login-container" style="
+        margin: 0 2rem 2rem 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      ">
+      <h2>Do you want to do with the product?</h2>
+        <a class="margin" [routerLink]="['/editproduct']" mat-raised-button color="primary" style="width: 100%">
           Edit products
         </a>
-        <a class="margin" [routerLink]="['/newProduct']" mat-raised-button color="primary" style="width: 100%;">
+        <a class="margin" [routerLink]="['/newProduct']" mat-raised-button color="primary" style="width: 100%">
           Nex product
         </a>
 
-      </div>
+      <h2>Do you want to do with the store?</h2>
+        <a class="margin" [routerLink]="['/editStore']" mat-raised-button color="primary" style="width: 100%">
+          Edit store
+        </a>
+        <a class="margin" [routerLink]="['/newStore']" mat-raised-button color="primary" style="width: 100%">
+          Nex store
+        </a>
+
+      <h2>Do you want to do with the category?</h2>
+        <a class="margin" [routerLink]="['/category']" mat-raised-button color="primary" style="width: 100%">
+          New category
+        </a>
+        <a class="margin" [routerLink]="['/editCategory']" mat-raised-button color="primary" style="width: 100%">
+          Edit category
+        </a>
+
+        <h2>Do you want to do with the details?</h2>
+
+          <a class="margin" [routerLink]="['/viewdetails']" mat-raised-button color="primary" style="width: 100%">
+            View details
+          </a>
+
     </div>
   </div>
 </div>

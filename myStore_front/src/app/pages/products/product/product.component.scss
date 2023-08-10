@@ -39,7 +39,6 @@
   }
 }
 
-/* product.component.scss */
 .buy-button {
   display: flex;
   justify-content: space-around;
@@ -47,7 +46,7 @@
 
 .button-content {
   display: flex;
-  align-items: center; /* Centra verticalmente los elementos en el contenedor */
+  align-items: center;
 }
 
 .mat-button-wrapper {
@@ -62,8 +61,8 @@
 }
 
 .center {
-  margin: 0 8px; /* Espacio entre el elemento del centro y los elementos de los lados */
-  flex: 1; /* Hace que este elemento ocupe el espacio restante en el centro */
+  margin: 0 8px;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,12 +84,12 @@
 }
 
 .card {
-  width: 300px; /* Ajusta el ancho de la card según tu diseño */
+  width: 300px;
 }
 
 .product-image {
-  height: 200px; /* Ajusta la altura deseada para la imagen */
-  overflow: hidden; /* Evita que la imagen sobresalga de la card */
+  height: 200px;
+  overflow: hidden;
   margin-bottom: .5rem;
 }
 

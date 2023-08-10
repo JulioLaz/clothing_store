@@ -188,6 +188,41 @@
       "date": "7/8/2023",
       "isDelivery": false,
       "id": 6
+    },
+    {
+      "name": "Julio alberto",
+      "store": {
+        "city": "Tucumán",
+        "address": "AV. Mate de Luna 5000",
+        "name": "Clothing Store VIvi all inclusive",
+        "openingHours": "17:00 hs a 21:00 hs",
+        "date": "8/8/2023",
+        "id": "8qozpp3g5CipiJByDl3N"
+      },
+      "date": "8/8/2023",
+      "isDelivery": false,
+      "id": 7
+    },
+    {
+      "name": "Julio alberto",
+      "store": "",
+      "date": "9/8/2023",
+      "isDelivery": false,
+      "id": 8
+    },
+    {
+      "name": "Julio alberto",
+      "store": {
+        "city": "Roma",
+        "date": "8/8/2023",
+        "name": "SS: Sock Store",
+        "address": "AV. Mate de Luna 5000",
+        "openingHours": "17:00 hs a 21:00 hs",
+        "id": "ppzLlZyedCdfpCVNZivS"
+      },
+      "date": "9/8/2023",
+      "isDelivery": false,
+      "id": 9
     }
   ],
   "detailsOrders": [
@@ -220,6 +255,48 @@
       ],
       "orderId": 6,
       "id": 3
+    },
+    {
+      "details": [
+        {
+          "productId": "Es8pukdVlTuDq0t23i0l",
+          "productName": "Camisetas de Manga Corta Niños, Pack de 5",
+          "quantity": 5,
+          "updateStock": 95
+        }
+      ],
+      "orderId": 7,
+      "id": 4
+    },
+    {
+      "details": [
+        {
+          "productId": "8qgZZbBcZBhfBsnAwufV",
+          "productName": "Jeans",
+          "quantity": 4,
+          "updateStock": 96
+        }
+      ],
+      "orderId": 8,
+      "id": 5
+    },
+    {
+      "details": [
+        {
+          "productId": "8qgZZbBcZBhfBsnAwufV",
+          "productName": "Jeans",
+          "quantity": 2,
+          "updateStock": 94
+        },
+        {
+          "productId": "Es8pukdVlTuDq0t23i0l",
+          "productName": "Camisetas de Manga Corta Niños, Pack de 5",
+          "quantity": 2,
+          "updateStock": 93
+        }
+      ],
+      "orderId": 9,
+      "id": 6
     }
   ]
 }

@@ -26,7 +26,6 @@ export class EditproductComponent implements OnInit {
   filteredProducts: Product[] = [];
   filteredProducts_data: Product[] = [];
   selectedCategory: number = 1000;
-  // private subscription: Subscription | undefined;
 
   data: Product[] = [];
 
@@ -42,7 +41,7 @@ export class EditproductComponent implements OnInit {
     date: '',
     img:''
   };
-  categories: Category[] = []; // Asegúrate de importar la interfaz Category desde el lugar correcto
+  categories: Category[] = [];
   dataservicejson: any;
 
   constructor(
@@ -53,7 +52,6 @@ export class EditproductComponent implements OnInit {
   ) { }
 
   ngOnDestroy(): void {
-    // Unsubscribe to avoid memory leaks
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
@@ -61,7 +59,7 @@ export class EditproductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    this.getCategories(); // Llamamos a la función para obtener las categorías
+    this.getCategories();
   }
 
   getProducts(): void {
@@ -86,13 +84,12 @@ export class EditproductComponent implements OnInit {
     const promise = this.datajsonservice.updateProduct(product);
     const observable = from(promise);
     observable.subscribe(
-      () => console.log('Producto actualizado con éxito.'),
+      () =>{alert("Product edited successfully "); console.log('Producto actualizado con éxito.')},
       (error) => console.error('Error al actualizar el producto:', error)
     );
   }
 
   deleteProduct(product: Product): void {
-    // Elimina el producto de la base de datos utilizando el servicio correspondiente
     this.dataService.delProduct(product).then(() => {
       console.log('Producto eliminado con éxito.');
     }).catch((error) => {

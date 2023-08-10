@@ -67,8 +67,6 @@ productData: { [id: number]: { qty: number; stock: number } } = {};
   removeFromCart(product: Product): void {
     const index = this.products.findIndex(({ id }) => id === product.id);
 
-    // const index = this.products.findIndex(({ id }) => id === product.id);
-
     if (index !== -1) {
       this.products.splice(index, 1);
       this.cartSubject.next(this.products);

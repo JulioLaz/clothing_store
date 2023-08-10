@@ -3,5 +3,6 @@ export interface Store {
   name: string;
   address: string;
   city: string;
+  date: string;
   openingHours: string;
 }

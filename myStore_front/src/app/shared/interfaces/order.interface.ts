@@ -3,6 +3,8 @@ export interface Details {
   productName: string;
   quantity: number;
   updateStock: number;
+  price:number;
+  total_purchase_value:number;
 }
 
 export interface Order {
@@ -11,10 +13,13 @@ export interface Order {
   city: string;
   date: string;
   isDelivery: boolean;
+  price:number;
   id: number;
 }
 
 export interface DetailsOrder {
   details: Details[];
-  orderId: number;
+  orderId: string;
+  total:number;
+  date:string
 }

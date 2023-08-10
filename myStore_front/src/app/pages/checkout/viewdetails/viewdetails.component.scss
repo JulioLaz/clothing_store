@@ -1,0 +1,57 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.products {
+  margin-top: 6rem;
+}
+
+.total {
+  font-weight: bold;
+}
+.total-general {
+  text-align: right;
+}
+.qr-code {
+  text-align: center;
+  margin-top: 20px;
+}
+img.qr-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.buttons {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 20px; /* Añade espacio arriba para separar los botones de las tablas */
+}
+
+.total_general{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: end;
+}
+@media screen and (max-width: 600px) {
+  .products {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+  }

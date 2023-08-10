@@ -25,13 +25,6 @@ export class ProductsService {
   //   const body = { "stock": stock };
   //   return this.http.patch<any>(`${this.apiURL}/${productId}`, body);
   // }
-// cambiar ddbb firestore:
-updateStock(productId: number, stock: number) {
-  const productDocRef = doc(this.firestore, `product/${productId}`);
-  const body = { stock: stock };
-  return updateDoc(productDocRef, body);
-}
-
 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.apiURL_cat);
@@ -47,5 +40,11 @@ updateStock(productId: number, stock: number) {
     return this.http.delete<any>(this.apiURL + `delete/${id}`);
   }
 
+  // cambiar ddbb firestore:
+  updateStock(productId: number, stock: number) {
+    const productDocRef = doc(this.firestore, `product/${productId}`);
+    const body = { stock: stock };
+    return updateDoc(productDocRef, body);
+  }
 
 }

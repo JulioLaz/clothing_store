@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body class="products">
+  <div class="header">Comprobante de Compra</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of data">
+        <tr>
+          <td colspan="4" class="total">Orden #{{ item.id }} {{item.date}} </td>
+        </tr>
+        <tr *ngFor="let detail of item.details; let i = index">
+          <td>{{ detail.productName }}</td>
+          <td>{{ detail.quantity }}</td>
+          <td>{{ detail.price }}</td>
+          <td>{{ detail.total_purchase_value }}</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td class="total">Total: {{ item.total }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <table>
+    <tbody>
+      <ng-container >
+        <tr>
+          <td colspan="4" class="total_general">TOTAL: {{ sumTotal |currency:'USD':'symbol':'1.2-2'  }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+    </table>
+
+    <div class="buttons">
+      <button mat-stroked-button color="primary"  (click)="print()">Imprimir</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="containe">
+  <form class="form edicion" #newProductForm="ngForm" >
+    <table class="table anchoTotal">
+      <caption class="main-title">New Store</caption>
+          <tbody >
+          <tr >
+            <mat-form-field class=" anchoTotal">
+              <input  matInput type="text" placeholder="Name" [(ngModel)]="model.name" name="name" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput type="text" placeholder="Address" [(ngModel)]="model.address" name="address" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput type="text" placeholder="City" [(ngModel)]="model.city" name="city" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input matInput type="text" placeholder="Opening Hours" [(ngModel)]="model.openingHours" name="openingHours" required >
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field class="anchoTotal" >
+              <input style="width: 7rem;" matInput type="date" placeholder="Date" [(ngModel)]="model.date" name="date" required >
+            </mat-form-field>
+          </tr>
+          <tr style="display: flex;justify-content: center;">
+              <button style="width: 70%;" (click)="onSubmit(newProductForm)" [disabled]="!newProductForm.form.valid" class="" color="primary" mat-raised-button type="submit">
+                Add Product
+              </button>
+          </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

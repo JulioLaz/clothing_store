@@ -1,0 +1,34 @@
+.container {
+  margin: 6rem auto 0;
+  width: 90%;
+}
+
+.anchoTotal {
+    margin-bottom: .5rem;
+    width: 100%;
+    padding:0 1rem;
+}
+
+.actions {
+  margin: 0 auto 0;
+  width: 40%;
+
+  &__btn {
+    width: 100%;
+  }
+}
+.main-title {
+  text-align: center;
+  font-family: roboto;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1rem;
+  // color: grey;
+
+}
+@media screen and (max-width: 600px) {
+  .edicion {
+    margin-top: 10rem;
+  }
+  }
+

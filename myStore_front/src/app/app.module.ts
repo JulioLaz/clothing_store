@@ -20,6 +20,11 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { MatTableModule } from '@angular/material/table';
 import { NewcategoryComponent } from './shared/components/categorias/newcategory.component';
+import { NewstoreComponent } from './pages/store/newstore/newstore.component';
+import { StoreComponent } from './pages/store/store.component';
+import { EditstoreComponent } from './pages/store/editstore/editstore.component';
+import { EditcategoryComponent } from './shared/components/categorias/editcategory/editcategory.component';
+// import { ViewdetailsComponent } from './pages/checkout/viewdetails/viewdetails.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { NewcategoryComponent } from './shared/components/categorias/newcategory
     CartComponent,
     CategoriasComponent,
     NewcategoryComponent,
+    EditcategoryComponent,
     LoginComponent,
+    NewstoreComponent,
+    StoreComponent,
+    EditstoreComponent,
+    // ViewdetailsComponent
 
  ],
   imports: [

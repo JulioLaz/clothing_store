@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8 edicion">
+  <table mat-table [dataSource]="categorias" class="edicion" style="width: 100%;">
+    <caption class="main-title">Edit Category</caption>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let categorias">
+        <input type="text" [(ngModel)]="categorias.name" class="no-border" style="width: 17vw;">
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="center">Actions</th>
+      <td mat-cell *matCellDef="let categorias">
+        <button mat-icon-button color="primary" (click)="editCategory(categorias)" class="column-button">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteCategory(categorias)" class="column-button">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

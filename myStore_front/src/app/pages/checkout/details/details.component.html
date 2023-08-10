@@ -1,5 +1,6 @@
 <div class="container">
   <table class="table">
+    <caption  class="main-title">Products Details</caption>
     <thead>
       <tr>
         <th>ID</th>
@@ -7,7 +8,7 @@
         <th>Qty</th>
         <th>Price unit</th>
         <th>Sub total</th>
-        <th>Stock</th>
+        <!-- <th>Stock</th> -->
       </tr>
     </thead>
     <tbody>
@@ -17,7 +18,7 @@
         <td>{{ item.qty }}</td>
         <td>{{ item.price | currency }}</td>
         <td>{{ item.qty * item.price | currency }}</td>
-        <td>{{ item.stock - item.qty }}</td>
+        <!-- <td>{{ item.stock - item.qty }}</td> -->
       </tr>
     </tbody>
   </table>
